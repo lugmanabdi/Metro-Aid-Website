@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Metro Aid LLC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfrfm0qAAAAAMl780LHAoyN4eSkEWsoRWklN2aF"></script>
     <style>
         /* General styling */
         body {
@@ -319,7 +319,7 @@
                     <input type="email" name="Email" placeholder="Email" required>
                     <input type="text" name="Phone" placeholder="Phone" required>
                     <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LfbhW0qAAAAAKSzbfwICxz5DY3-HPAodbpWZ5NE"></div>
+                    <div class="g-recaptcha" data-sitekey="6Lfrfm0qAAAAAMl780LHAoyN4eSkEWsoRWklN2aF"></div>
                     <br>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
@@ -370,10 +370,11 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             
-            if (grecaptcha.getResponse() === "") {
+            // Uncomment the following lines when reCAPTCHA is enabled
+             if (grecaptcha.getResponse() === "") {
                 alert("Please complete the reCAPTCHA.");
                 return;
-            }
+             }
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
