@@ -2,261 +2,581 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Us - Metro Aid</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>About Metro Aid LLC - House Stabilization Services in Minnesota</title>
+    <meta name="description" content="Metro Aid LLC provides dedicated House Stabilization Services (HSS) in Minnesota, supporting individuals and families in achieving stable, secure living environments through personalized care.">
+    <meta name="keywords" content="house stabilization services, Minnesota housing support, Metro Aid LLC, housing assistance, stable living, Columbia Heights">
+    <meta name="author" content="Metro Aid LLC">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Metro Aid LLC - House Stabilization Services">
+    <meta property="og:description" content="Dedicated provider of House Stabilization Services supporting stable and secure living environments in Minnesota.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metroaidmn.com/about.html">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Images/logo.jpg">
+    <link rel="apple-touch-icon" href="Images/logo.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Metro Aid LLC",
+        "description": "House Stabilization Services provider in Minnesota",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1330 Lagoon Ave S, 4th Floor Room 413",
+            "addressLocality": "Minneapolis",
+            "addressRegion": "MN",
+            "addressCountry": "US"
+        },
+        "telephone": "(612) 499-2597",
+        "email": "metroaidmn@gmail.com",
+        "url": "https://metroaidmn.com",
+        "logo": "https://metroaidmn.com/Images/logo3.JPG"
+    }
+    </script>
+
     <style>
-        /* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-}
+        :root {
+            --primary-blue: #24a8e1;
+            --light-blue: #EDF8FE;
+            --dark-blue: #1a7ba8;
+            --text-dark: #2c3e50;
+            --text-medium: #4a5568;
+            --text-light: #718096;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --shadow: 0 4px 20px rgba(36, 168, 225, 0.1);
+            --shadow-hover: 0 8px 30px rgba(36, 168, 225, 0.15);
+            --gradient: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+        }
 
-/* Header Styling */
-header {
-    background-color: #EDF8FE;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow-x: hidden;
+        }
 
-.logo img {
-    max-height: 80px;
-}
+        /* Header Styling */
+        header {
+            background: rgba(237, 248, 254, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(36, 168, 225, 0.1);
+            transition: all 0.3s ease;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
+        .container-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
 
-nav ul li {
-    margin-left: 30px;
-}
+        .logo img {
+            max-height: 60px;
+            transition: transform 0.3s ease;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #24a8e1;
-    font-size: 18px;
-    font-weight: bold;
-}
+        .logo img:hover {
+            transform: scale(1.05);
+        }
 
-/* Page Title Styling */
-.page-title {
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #333;
-    margin: 40px 0 20px;
-    position: relative;
-}
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
 
-/* About Section */
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 900px;
-    padding: 20px;
-}
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
 
-.bubble {
-    margin: 20px;
-    padding: 25px;
-    border-radius: 15px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1.5s ease forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
 
-.bubble:hover {
-    transform: translateY(20px); /* Translates slightly upwards on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Adds more shadow on hover */
-}
+        .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
 
-.bubble-icon {
-    font-size: 2em;
-    color: #24a8e1;
-    margin-bottom: 15px;
-}
+        .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
 
-.bubble h2 {
-    font-size: 1.8em;
-    margin-top: 0;
-    color: #333;
-    font-family: 'Georgia', serif;
-}
+        nav {
+            transition: all 0.3s ease;
+        }
 
-.bubble p {
-    color: #555;
-    font-size: 1.1em;
-    line-height: 1.8;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
 
-/* Footer styling */
-.footer {
-    background-color: #EDF8FE;
-    padding: 40px 0;
-    color: #333;
-    text-align: center;
-    border-top: 2px solid #ccc;
-}
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
 
-.container-footer {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
+        nav ul li a:hover::after {
+            width: 100%;
+        }
 
-.footer-column {
-    flex: 1;
-    text-align: left;
-    padding: 0 10px;
-}
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.footer .logo img {
-    max-height: 80px;
-}
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" fill="rgba(255,255,255,0.1)"><circle cx="20" cy="10" r="3"/><circle cx="40" cy="15" r="2"/><circle cx="60" cy="5" r="2.5"/><circle cx="80" cy="12" r="2"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
 
-.footer .contact-info h3,
-.footer .hours-operation h3,
-.footer .menu-footer h3 {
-    color: #24a8e1;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+        @keyframes float {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
-.footer .contact-info p,
-.footer .hours-operation p,
-.footer .menu-footer ul li a {
-    color: #000; /* Initial color: black */
-    font-size: 16px;
-    margin: 5px 0;
-    transition: color 0.3s ease; /* Smooth transition on hover */
-}
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
 
-.footer .menu-footer ul {
-    list-style: none;
-    padding: 0;
-}
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1s ease 0.1s both;
+        }
 
-.footer .menu-footer ul li {
-    margin-bottom: 5px;
-}
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease 0.3s both;
+            line-height: 1.2;
+        }
 
-.footer .menu-footer ul li a {
-    text-decoration: none;
-}
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.5s both;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-.footer .contact-info p:hover,
-.footer .hours-operation p:hover,
-.footer .menu-footer ul li a:hover {
-    color: #24a8e1; /* Hover color */
-}
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
 
-.footer-bottom {
-    background-color: #EDF8FE;
-    padding: 10px 0;
-    text-align: center;
-    color: #666;
-    font-size: 14px;
-}
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
 
-@media (max-width: 768px) {
-    #about {
-        max-width: 100%;
-        padding: 10px;
-    }
+        .content-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
-    .bubble {
-        width: 100%;
-        margin: 10px 0;
-    }
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
 
-    .container-header {
-        flex-direction: column;
-        align-items: center;
-    }
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
 
-    nav ul li {
-        margin: 5px 0;
-    }
-    /* Footer adjustments */
-    .container-footer {
-        flex-direction: column;
-        text-align: center;
-    }
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(36, 168, 225, 0.3);
+        }
 
-    .footer-column {
-        margin-bottom: 20px;
-    }
+        .content-card:hover .card-icon {
+            transform: rotate(-5deg) scale(1.1);
+            box-shadow: 0 12px 35px rgba(36, 168, 225, 0.4);
+        }
 
-    .footer .logo img {
-        max-height: 60px;
-    }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
 
-    .footer .contact-info h3,
-    .footer .hours-operation h3,
-    .footer .menu-footer h3 {
-        font-size: 16px;
-    }
+        .card-text {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
 
-    .footer .contact-info p,
-    .footer .hours-operation p,
-    .footer .menu-footer ul li a {
-        font-size: 14px;
-    }
-}
+        /* Stats Section */
+        .stats-section {
+            background: var(--white);
+            padding: 60px 0;
+            margin: 60px 0;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
 
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        .stat-item {
+            text-align: center;
+        }
 
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-blue);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--light-blue);
+            padding: 60px 0 0;
+            margin-top: 80px;
+        }
+
+        .container-footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            text-align: left;
+        }
+
+        .footer .logo img {
+            max-height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer p, .footer a {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            background: #d8f0fd;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(237, 248, 254, 0.98);
+                backdrop-filter: blur(10px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.3s ease;
+                z-index: 1000;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            nav ul li a {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .content-card {
+                padding: 30px 25px;
+            }
+
+            .main-content {
+                padding: 40px 15px;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container-footer {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <div class="container-header">
             <div class="logo">
-                <a href="index.html"><img src="Images/logo3.jpg" alt="Metro Aid Logo"></a>
+                <a href="index.html">
+                    <img src="Images/logo3.png" alt="Metro Aid - House Stabilization Services">
+                </a>
             </div>
-            <nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+            
+            <nav id="mobileNav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -268,57 +588,85 @@ nav ul li a {
         </div>
     </header>
 
-    <!-- Page Title for About Us -->
-    <div class="page-title">
-        About Us
-    </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="bubble" id="about-bubble">
-            <div class="bubble-icon"><i class="fas fa-building"></i></div>
-            <h2>About Metro Aid LLC</h2>
-            <p><em>Metro Aid LLC is a dedicated provider of House Stabilization Services (HSS), supporting individuals and families in achieving stable and secure living environments. Our experienced team works closely with clients to address housing challenges, offering tailored solutions that empower individuals to regain control of their lives.</em></p>
-        </div>
-
-        <div class="bubble" id="mission-bubble">
-            <div class="bubble-icon"><i class="fas fa-bullseye"></i></div>
-            <h2>Mission Statement</h2>
-            <p><em>Our mission is to provide personalized, holistic house stabilization services that promote long-term stability and independence. We aim to empower individuals by connecting them with essential resources, fostering personal growth, and ensuring they have the tools to thrive in a stable home environment.</em></p>
-        </div>
-
-        <div class="bubble" id="vision-bubble">
-            <div class="bubble-icon"><i class="fas fa-eye"></i></div>
-            <h2>Vision Statement</h2>
-            <p><em>Our vision is to build a community where everyone has access to safe, secure, and stable housing, with resources and support necessary to live with dignity and independence.</em></p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-home" style="margin-right: 8px;"></i>
+                House Stabilization Services
+            </div>
+            <h1 class="hero-title">About Metro Aid</h1>
+            <p class="hero-subtitle">Empowering individuals and families through dedicated House Stabilization Services</p>
         </div>
     </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-grid">
+            <article class="content-card animate-on-scroll">
+                <div class="card-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h2 class="card-title">Who We Are</h2>
+                <p class="card-text">Metro Aid LLC is a dedicated provider of House Stabilization Services (HSS), supporting individuals and families in achieving stable and secure living environments. Our experienced team works closely with clients to address housing challenges, offering tailored solutions that empower individuals to regain control of their lives.</p>
+            </article>
+
+            <article class="content-card animate-on-scroll">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2 class="card-title">Our Mission</h2>
+                <p class="card-text">Our mission is to provide personalized, holistic house stabilization services that promote long-term stability and independence. We aim to empower individuals by connecting them with essential resources, fostering personal growth, and ensuring they have the tools to thrive in a stable home environment.</p>
+            </article>
+
+            <article class="content-card animate-on-scroll">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2 class="card-title">Our Vision</h2>
+                <p class="card-text">Our vision is to build a community where everyone has access to safe, secure, and stable housing, with resources and support necessary to live with dignity and independence. We strive to be the leading provider of housing stability services in Minnesota.</p>
+            </article>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="cta-section animate-on-scroll">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-text">Take the first step towards housing stability with our comprehensive support services.</p>
+            <a href="Getting-Started.html" class="cta-button">
+                <i class="fas fa-arrow-right" style="margin-right: 8px;"></i>
+                Get Started Today
+            </a>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container-footer">
-            <div class="footer-column logo">
-                <a href="index.html"><img src="Images/logo3.jpg" alt="Metro Aid Logo"></a>
+            <div class="footer-column">
+                <div class="logo">
+                    <img src="Images/logo3.png" alt="Metro Aid Logo">
+                </div>
+                <p>Providing dedicated House Stabilization Services to support stable and secure living environments.</p>
             </div>
-    
-            <div class="footer-column contact-info">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 1218 43rd Ave NE, Columbia Heights MN, 55421</p>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:metoraidmn@gmail.com" style="color: inherit; text-decoration: none;">metroaidmn@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6124992597" style="color: inherit; text-decoration: none;">(612) 499-2597</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6129784167" style="color: inherit; text-decoration: none;">(612) 978-4167</a></p>
+
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 1330 Lagoon Ave S, 4th Floor Room 413</p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> <a href="mailto:metroaidmn@gmail.com">metroaidmn@gmail.com</a></p>
+                <p><i class="fas fa-phone" style="margin-right: 8px;"></i> <a href="tel:6124992597">(612) 499-2597</a></p>
+                <p><i class="fas fa-phone" style="margin-right: 8px;"></i> <a href="tel:6129784167">(612) 978-4167</a></p>
             </div>
-    
-            <div class="footer-column hours-operation">
+
+            <div class="footer-column">
                 <h3>Hours of Operation</h3>
-                <p>Monday - Friday: 08:00 - 17:00</p>
+                <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
                 <p>Saturday - Sunday: Closed</p>
             </div>
-    
-            <div class="footer-column menu-footer">
+
+            <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="Getting-Started.html">Getting Started</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -326,22 +674,83 @@ nav ul li a {
                 </ul>
             </div>
         </div>
-    
+
         <div class="footer-bottom">
             <p>&copy; 2024 Metro Aid LLC - All Rights Reserved | Designed and Managed by Horizons Web Designs</p>
         </div>
     </footer>
 
-    <!-- Animation Script -->
+    <!-- JavaScript for Animations -->
     <script>
-        window.onload = function() {
-            const bubbles = document.querySelectorAll('.bubble');
-            bubbles.forEach((bubble, index) => {
-                setTimeout(() => {
-                    bubble.style.animation = 'fadeInUp 2s forwards';
-                }, index * 1000);
-            });
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(237, 248, 254, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(36, 168, 225, 0.1)';
+            } else {
+                header.style.background = 'rgba(237, 248, 254, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
     </script>
 </body>
 </html>
