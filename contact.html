@@ -1,397 +1,995 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/logo.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Metro Aid LLC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfrfm0qAAAAAMl780LHAoyN4eSkEWsoRWklN2aF"></script> -->
-    <style>
-        /* General styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-/* Header styling */
-        header {
-            background-color: #EDF8FE;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+<!-- SEO Meta Tags -->
+<title>Contact Metro Aid - House Stabilization Services in Minnesota</title>
+<meta name="description" content="Contact Metro Aid for House Stabilization Services in Minnesota. Reach us by phone, email, or use our contact form. Located at 1330 Lagoon Ave S, Minneapolis.">
+<meta name="keywords" content="Metro Aid contact, house stabilization services Minnesota, contact form, Minneapolis housing support, HSS services contact">
+<meta name="author" content="Metro Aid">
+<meta name="robots" content="index, follow">
 
-        .container-header {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Contact Metro Aid - House Stabilization Services">
+<meta property="og:description" content="Get in touch with Metro Aid for House Stabilization Services. Multiple ways to contact us for housing support in Minnesota.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metroaidmn.com/contact.html">
 
-        .logo img {
-            max-height: 80px;
-        }
+<!-- Favicon -->
+<link rel="shortcut icon" href="Images/logo.jpg">
+<link rel="apple-touch-icon" href="Images/logo.jpg">
 
-        .logo a {
-            text-decoration: none;
-        }
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-        }
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        nav ul li {
-            margin-left: 30px;
-        }
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "ContactPage",
+"name": "Contact Metro Aid",
+"description": "Contact information for Metro Aid House Stabilization Services",
+"provider": {
+"@type": "Organization",
+"name": "Metro Aid",
+"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1330 Lagoon Ave S, 4th Floor Room 413",
+    "addressLocality": "Minneapolis",
+    "addressRegion": "MN",
+    "addressCountry": "US"
+},
+"telephone": ["(612) 499-2597", "(612) 978-4167"],
+"email": "metroaidmn@gmail.com",
+"url": "https://metroaidmn.com"
+}
+}
+</script>
 
-        nav ul li a {
-            text-decoration: none;
-            color: #24a8e1;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-/* Contact Section */
-        #contact {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 20px;
-        }
-
-        .contact-info {
-            flex: 1;
-            max-width: 300px;
-        }
-
-        .contact-form {
-            flex: 2;
-        }
-
-        .contact-info h2 {
-            color: #24a8e1;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .contact-info p i {
-            color: #24a8e1;
-            margin-right: 15px;
-            font-size: 25px;
-        }
-
-        .contact-info p {
-             margin: 10px 0;
-            text-align: left;
-            transition: color 0.3s ease, transform 0.3s ease; /* Transition effect */
-        }
-
-        .main-contact p:hover {
-            color: #24a8e1;
-            transform: scale(1.05);
-        }
-
-
-
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 1em;
-            background: #fff;
-            color: #000;
-        }
-
-        .contact-form button {
-            background-color: #24a8e1;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Footer Styling */
-        .footer {
-            background-color: #EDF8FE;
-            padding: 40px 0;
-            color: #333;
-            text-align: center;
-            border-top: 2px solid #ccc;
-        }
-
-        .container-footer {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .footer-column {
-            flex: 1;
-            text-align: left;
-            padding: 0 10px;
-        }
-
-        .footer .logo img {
-            max-height: 80px;
-        }
-
-        .footer .contact-info h3,
-        .footer .hours-operation h3,
-        .footer .menu-footer h3 {
-            color: #24a8e1;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        /* Contact Info Text in Footer */
-        .footer .contact-info p {
-            color: #000;
-            font-size: 16px;
-            margin: 5px 0;
-            transition: color 0.3s ease;
-        }
-
-        /* Hours of Operation Text in Footer */
-        .footer .hours-operation p {
-            color: #000;
-            font-size: 16px;
-            margin: 5px 0;
-            transition: color 0.3s ease;
-        }
-
-        /* Quick Links in Footer */
-        .footer .menu-footer ul li a {
-            color: #000;
-            font-size: 16px;
-            margin: 5px 0;
-            transition: color 0.3s ease;
-        }
-
-
-        .footer .menu-footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer .menu-footer ul li {
-            margin-bottom: 5px;
-        }
-
-        .footer .menu-footer ul li a {
-            text-decoration: none;
-        }
-
-        .footer .contact-info p:hover,
-        .footer .hours-operation p:hover,
-        .footer .menu-footer ul li a:hover {
-            color: #24a8e1;
-        }
-
-        .footer-bottom {
-            background-color: #EDF8FE;
-            padding: 10px 0;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-    @media (max-width: 768px) {
-    /* Stack Contact Info and Form on Top of Each Other */
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-info, .contact-form {
-        width: 100%; /* Full width for each section */
-        margin: 10px 0; /* Space between the boxes */
-    }
-
-    /* Header adjustments */
-    .container-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    /* Footer adjustments */
-    .container-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        margin-bottom: 20px;
-    }
-
-    .footer .logo img {
-        max-height: 60px;
-    }
-
-    .footer .contact-info h3,
-    .footer .hours-operation h3,
-    .footer .menu-footer h3 {
-        font-size: 16px;
-    }
-
-    .footer .contact-info p,
-    .footer .hours-operation p,
-    .footer .menu-footer ul li a {
-        font-size: 14px;
-    }
+<style>
+:root {
+--primary-blue: #24a8e1;
+--light-blue: #EDF8FE;
+--dark-blue: #1a7ba8;
+--text-dark: #2c3e50;
+--text-medium: #4a5568;
+--text-light: #718096;
+--white: #ffffff;
+--light-gray: #f8f9fa;
+--shadow: 0 4px 20px rgba(36, 168, 225, 0.1);
+--shadow-hover: 0 8px 30px rgba(36, 168, 225, 0.15);
+--gradient: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+--success-green: #22c55e;
+--error-red: #ef4444;
 }
 
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-    </style>
+body {
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+color: var(--text-dark);
+background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+background: rgba(237, 248, 254, 0.95);
+backdrop-filter: blur(10px);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid rgba(36, 168, 225, 0.1);
+transition: all 0.3s ease;
+}
+
+.container-header {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+position: relative;
+}
+
+.logo img {
+max-height: 60px;
+transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+transform: scale(1.05);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+display: none;
+flex-direction: column;
+cursor: pointer;
+padding: 5px;
+z-index: 1001;
+}
+
+.hamburger-line {
+width: 25px;
+height: 3px;
+background-color: var(--primary-blue);
+margin: 3px 0;
+transition: all 0.3s ease;
+border-radius: 2px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -6px);
+}
+
+nav {
+transition: all 0.3s ease;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 30px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: var(--primary-blue);
+font-weight: 500;
+font-size: 16px;
+position: relative;
+transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -5px;
+left: 0;
+background: var(--gradient);
+transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+background: var(--gradient);
+color: white;
+padding: 120px 0 80px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: -50%;
+width: 200%;
+height: 100%;
+background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" fill="rgba(255,255,255,0.1)"><circle cx="20" cy="10" r="3"/><circle cx="40" cy="15" r="2"/><circle cx="60" cy="5" r="2.5"/><circle cx="80" cy="12" r="2"/></svg>') repeat;
+animation: float 20s linear infinite;
+}
+
+@keyframes float {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+
+.hero-content {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 20px;
+position: relative;
+z-index: 2;
+}
+
+.hero-badge {
+display: inline-block;
+background: rgba(255, 255, 255, 0.2);
+color: white;
+padding: 12px 25px;
+border-radius: 50px;
+font-size: 0.9rem;
+font-weight: 500;
+margin-bottom: 25px;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+animation: fadeInUp 1s ease 0.1s both;
+}
+
+.hero-title {
+font-family: 'Playfair Display', serif;
+font-size: 4rem;
+font-weight: 600;
+margin-bottom: 25px;
+animation: fadeInUp 1s ease 0.3s both;
+line-height: 1.2;
+}
+
+.hero-subtitle {
+font-size: 1.3rem;
+opacity: 0.95;
+animation: fadeInUp 1s ease 0.5s both;
+line-height: 1.6;
+max-width: 700px;
+margin: 0 auto;
+}
+
+/* Main Content */
+.main-content {
+max-width: 1200px;
+margin: 0 auto;
+padding: 80px 20px;
+}
+
+.contact-container {
+display: grid;
+grid-template-columns: 1fr 1.5fr;
+gap: 60px;
+margin-bottom: 60px;
+}
+
+/* Contact Info Section with Business Hours */
+.contact-info-section {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+background: var(--white);
+padding: 45px;
+border-radius: 25px;
+box-shadow: var(--shadow);
+height: fit-content;
+position: relative;
+overflow: hidden;
+border: 1px solid rgba(36, 168, 225, 0.1);
+transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 25px 50px rgba(36, 168, 225, 0.25);
+}
+
+.contact-info-title {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+color: var(--text-dark);
+margin-bottom: 30px;
+text-align: center;
+}
+
+.contact-method {
+display: flex;
+align-items: center;
+margin-bottom: 25px;
+padding: 15px;
+border-radius: 12px;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+
+.contact-method:hover {
+background-color: rgba(36, 168, 225, 0.05);
+transform: translateX(5px);
+}
+
+.contact-icon {
+width: 60px;
+height: 60px;
+background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 1.4rem;
+margin-right: 15px;
+flex-shrink: 0;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(36, 168, 225, 0.3);
+}
+
+.contact-method:hover .contact-icon {
+transform: rotate(-5deg) scale(1.1);
+box-shadow: 0 8px 25px rgba(36, 168, 225, 0.4);
+}
+
+.contact-details h4 {
+color: var(--text-dark);
+font-weight: 600;
+margin-bottom: 5px;
+}
+
+.contact-details p {
+color: var(--text-medium);
+margin: 0;
+}
+
+.contact-details a {
+color: inherit;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+color: var(--primary-blue);
+}
+
+/* Contact Form */
+.contact-form-card {
+background: var(--white);
+padding: 45px;
+border-radius: 25px;
+box-shadow: var(--shadow);
+position: relative;
+overflow: hidden;
+border: 1px solid rgba(36, 168, 225, 0.1);
+transition: all 0.3s ease;
+}
+
+.contact-form-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 25px 50px rgba(36, 168, 225, 0.25);
+}
+
+.form-title {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+color: var(--text-dark);
+margin-bottom: 30px;
+text-align: center;
+}
+
+.form-group {
+margin-bottom: 25px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: var(--text-dark);
+font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 15px;
+border: 2px solid #e2e8f0;
+border-radius: 12px;
+font-size: 16px;
+font-family: inherit;
+transition: all 0.3s ease;
+background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary-blue);
+background: white;
+box-shadow: 0 0 0 3px rgba(36, 168, 225, 0.1);
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.submit-btn {
+background: var(--gradient);
+color: white;
+padding: 15px 40px;
+border: none;
+border-radius: 50px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+display: block;
+margin: 30px auto 0;
+box-shadow: 0 4px 15px rgba(36, 168, 225, 0.3);
+}
+
+.submit-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(36, 168, 225, 0.4);
+}
+
+.submit-btn:active {
+transform: translateY(0);
+}
+
+/* Success/Error Messages */
+.message {
+padding: 15px;
+border-radius: 12px;
+margin-top: 20px;
+text-align: center;
+font-weight: 500;
+opacity: 0;
+transform: translateY(-10px);
+transition: all 0.3s ease;
+}
+
+.message.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+.message.success {
+background-color: rgba(34, 197, 94, 0.1);
+color: var(--success-green);
+border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.message.error {
+background-color: rgba(239, 68, 68, 0.1);
+color: var(--error-red);
+border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Business Hours Section - Compact Version */
+.hours-section {
+background: var(--white);
+padding: 30px;
+border-radius: 20px;
+box-shadow: var(--shadow);
+text-align: center;
+position: relative;
+overflow: hidden;
+border: 1px solid rgba(36, 168, 225, 0.1);
+transition: all 0.3s ease;
+}
+
+.hours-section:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(36, 168, 225, 0.15);
+}
+
+.hours-title {
+font-family: 'Playfair Display', serif;
+font-size: 1.5rem;
+color: var(--text-dark);
+margin-bottom: 15px;
+}
+
+.hours-info {
+color: var(--text-medium);
+font-size: 1rem;
+}
+
+.hours-info p {
+margin-bottom: 8px;
+}
+
+/* Footer */
+.footer {
+background: var(--light-blue);
+padding: 60px 0 0;
+margin-top: 80px;
+}
+
+.container-footer {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 40px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.footer-column {
+text-align: left;
+}
+
+.footer .logo img {
+max-height: 60px;
+margin-bottom: 20px;
+}
+
+.footer h3 {
+color: var(--primary-blue);
+font-size: 1.2rem;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+.footer p, .footer a {
+color: var(--text-medium);
+font-size: 0.95rem;
+margin-bottom: 10px;
+transition: color 0.3s ease;
+}
+
+.footer a:hover {
+color: var(--primary-blue);
+}
+
+.footer ul {
+list-style: none;
+}
+
+.footer ul li {
+margin-bottom: 8px;
+}
+
+.footer ul li a {
+text-decoration: none;
+}
+
+.footer-bottom {
+background: #d8f0fd;
+padding: 20px 0;
+margin-top: 40px;
+text-align: center;
+color: var(--text-light);
+font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.animate-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+.mobile-menu-toggle {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(237, 248, 254, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+nav.active {
+    right: 0;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+}
+
+.contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contact-info-section {
+    order: 2;
+}
+
+.contact-form-card {
+    order: 1;
+}
+
+.contact-info-card,
+.contact-form-card,
+.hours-section {
+    padding: 30px 25px;
+}
+
+.main-content {
+    padding: 40px 15px;
+}
+}
+
+@media (max-width: 480px) {
+.hero-title {
+    font-size: 2rem;
+}
+
+.container-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.contact-method {
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+}
+</style>
 </head>
 <body>
+<!-- Header Section -->
+<header>
+<div class="container-header">
+<div class="logo">
+    <a href="index.html">
+        <img src="Images/logo3.png" alt="Metro Aid - House Stabilization Services">
+    </a>
+</div>
 
-    <!-- Header -->
-    <header>
-        <div class="container-header">
-            <div class="logo">
-                <a href="index.html"><img src="Images/logo3.jpg" alt="Metro Aid Logo"></a>
+<!-- Mobile Menu Toggle -->
+<div class="mobile-menu-toggle" id="mobileMenuToggle">
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+</div>
+
+<nav id="mobileNav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="Getting-Started.html">Getting Started</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="hero-content">
+<div class="hero-badge">
+    <i class="fas fa-phone" style="margin-right: 8px;"></i>
+    Get In Touch
+</div>
+<h1 class="hero-title">Contact Us</h1>
+<p class="hero-subtitle">We're here to help you on your journey to housing stability. Reach out to our dedicated team for personalized assistance and support.</p>
+</div>
+</section>
+
+<!-- Main Content -->
+<main class="main-content">
+<div class="contact-container">
+<!-- Contact Information Section -->
+<div class="contact-info-section animate-on-scroll">
+    <!-- Contact Information -->
+    <div class="contact-info-card">
+        <h2 class="contact-info-title">Get In Touch</h2>
+        
+        <div class="contact-method">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="Getting-Started.html">Getting Started</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:metroaidmn@gmail.com">metroaidmn@gmail.com</a></p>
+            </div>
         </div>
-    </header>
 
-    <div id="contact">
-        <div class="contact-container">
-            <!-- Contact Info -->
-            <div class="contact-info main-contact">
-                <h2>Contact Us</h2>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:metoraidmn@gmail.com" style="color: inherit; text-decoration: none;">metroaidmn@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6124992597" style="color: inherit; text-decoration: none;">(612) 499-2597</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6129784167" style="color: inherit; text-decoration: none;">(612) 978-4167</a></p>
+        <div class="contact-method">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
             </div>
-            
+            <div class="contact-details">
+                <h4>Phone</h4>
+                <p><a href="tel:6124992597">(612) 499-2597</a></p>
+            </div>
+        </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Name" required>
-                    <input type="email" name="Email" placeholder="Email" required>
-                    <input type="text" name="Phone" placeholder="Phone" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <!-- <div class="g-recaptcha" data-sitekey="6Lfrfm0qAAAAAMl780LHAoyN4eSkEWsoRWklN2aF"></div> -->
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
+        <div class="contact-method">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+                <h4>Phone</h4>
+                <p><a href="tel:6129784167">(612) 978-4167</a></p>
+            </div>
+        </div>
+
+        <div class="contact-method">
+            <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+                <h4>Address</h4>
+                <p>1330 Lagoon Ave S<br>4th Floor Room 413<br>Minneapolis, MN</p>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="footer-column logo">
-                <a href="index.html"><img src="Images/logo3.jpg" alt="Metro Aid Logo"></a>
-            </div>
-            <div class="footer-column contact-info">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt"></i>1218 43rd Ave NE, Columbia Heights MN, 55421</p>
-                <p><i class="fa-regular fa-envelope"></i> <a href="mailto:metoraidmn@gmail.com" style="color: inherit; text-decoration: none;">metroaidmn@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6124992597" style="color: inherit; text-decoration: none;">(612) 499-2597</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:6129784167" style="color: inherit; text-decoration: none;">(612) 978-4167</a></p>
-            </div>
-            <div class="footer-column hours-operation">
-                <h3>Hours of Operation</h3>
-                <p>Monday - Friday: 08:00 - 17:00</p>
-                <p>Saturday - Sunday: Closed</p>
-            </div>
-            <div class="footer-column menu-footer">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="Getting-Started.html">Getting Started</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+    <!-- Business Hours Section - Now positioned under contact info -->
+    <section class="hours-section animate-on-scroll">
+        <h2 class="hours-title">Business Hours</h2>
+        <div class="hours-info">
+            <p><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
+            <p><strong>Saturday - Sunday:</strong> Closed</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Metro Aid LLC - All Rights Reserved | Designed and Managed by Horizons Web Designs</p>
+    </section>
+</div>
+
+<!-- Contact Form -->
+<div class="contact-form-card animate-on-scroll">
+    <h2 class="form-title">Send Us a Message</h2>
+    
+    <form name="submit-to-google-sheet" id="contactForm">
+        <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="Name" required>
         </div>
-    </footer>
 
-    <!-- Script for Google Form Submission -->
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxTWp47RxRRgulO95wCUJG25c646BmiHJVsVkOcCApawgFhoSwuJtSOloTwdBDZnjxt/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-    
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            
-             // Uncomment the following lines when reCAPTCHA is enabled
-             // if (grecaptcha.getResponse() === "") {
-             //    alert("Please complete the reCAPTCHA.");
-             //    return;
-             // }
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="Email" required>
+        </div>
 
-            
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(() => {
-                        msg.innerHTML = "";
-                    }, 5000);
-                    form.reset();
-                    
-                    // Reset reCAPTCHA after successful submission
-                    // grecaptcha.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
-    </script>
-    
-    
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="Phone" required>
+        </div>
 
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="Message" rows="6" required placeholder="Please describe how we can help you..."></textarea>
+        </div>
+
+        <!-- Google reCAPTCHA -->
+        <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LcyREorAAAAAM0YxFnBUtpyoI0QDwxnxNNIeMEJ"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+            Send Message
+        </button>
+    </form>
+    
+    <div id="msg" class="message"></div>
+</div>
+</div>
+</main>
+
+<!-- Footer Section -->
+<footer class="footer">
+<div class="container-footer">
+<div class="footer-column">
+    <div class="logo">
+        <img src="Images/logo3.png" alt="Metro Aid Logo">
+    </div>
+    <p>Providing dedicated House Stabilization Services to support stable and secure living environments.</p>
+</div>
+
+<div class="footer-column">
+    <h3>Contact Information</h3>
+    <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 1330 Lagoon Ave S, 4th Floor Room 413</p>
+    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i> <a href="mailto:metroaidmn@gmail.com">metroaidmn@gmail.com</a></p>
+    <p><i class="fas fa-phone" style="margin-right: 8px;"></i> <a href="tel:6124992597">(612) 499-2597</a></p>
+    <p><i class="fas fa-phone" style="margin-right: 8px;"></i> <a href="tel:6129784167">(612) 978-4167</a></p>
+</div>
+
+<div class="footer-column">
+    <h3>Hours of Operation</h3>
+    <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
+    <p>Saturday - Sunday: Closed</p>
+</div>
+
+<div class="footer-column">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="Getting-Started.html">Getting Started</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2024 Metro Aid - All Rights Reserved | Designed and Managed by Horizons Web Designs</p>
+</div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+// Mobile menu functionality
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const mobileNav = document.getElementById('mobileNav');
+
+mobileMenuToggle.addEventListener('click', () => {
+mobileMenuToggle.classList.toggle('active');
+mobileNav.classList.toggle('active');
+
+if (mobileNav.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+} else {
+    document.body.style.overflow = 'auto';
+}
+});
+
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+link.addEventListener('click', () => {
+    mobileMenuToggle.classList.remove('active');
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = 'auto';
+});
+});
+
+document.addEventListener('click', (e) => {
+if (!mobileNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+    mobileMenuToggle.classList.remove('active');
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+});
+
+// Smooth scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+    }
+});
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+observer.observe(el);
+});
+
+// Enhanced header scroll effect
+window.addEventListener('scroll', () => {
+const currentScroll = window.pageYOffset;
+const header = document.querySelector('header');
+
+if (currentScroll > 100) {
+    header.style.background = 'rgba(237, 248, 254, 0.98)';
+    header.style.boxShadow = '0 2px 20px rgba(36, 168, 225, 0.1)';
+} else {
+    header.style.background = 'rgba(237, 248, 254, 0.95)';
+    header.style.boxShadow = 'none';
+}
+});
+
+// Form submission for contact form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwqpF7Y_OMFuTVVqcoMDOeUbMk9_aficoDero_nFn7PWVfaEttQVH0ZK8KSS0ZTWpD_/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+
+// Check if reCAPTCHA is completed
+const recaptchaResponse = grecaptcha.getResponse();
+if (recaptchaResponse === "") {
+    msg.innerHTML = '<i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>Please complete the reCAPTCHA verification.';
+    msg.className = 'message error show';
+    
+    setTimeout(() => {
+        msg.classList.remove('show');
+        setTimeout(() => {
+            msg.innerHTML = '';
+            msg.className = 'message';
+        }, 300);
+    }, 5000);
+    return;
+}
+
+// Show loading state
+const submitBtn = form.querySelector('.submit-btn');
+const originalText = submitBtn.innerHTML;
+submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
+submitBtn.disabled = true;
+
+fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+        msg.innerHTML = '<i class="fas fa-check-circle" style="margin-right: 8px;"></i>Message sent successfully! We\'ll get back to you soon.';
+        msg.className = 'message success show';
+        
+        setTimeout(() => {
+            msg.classList.remove('show');
+            setTimeout(() => {
+                msg.innerHTML = '';
+                msg.className = 'message';
+            }, 300);
+        }, 5000);
+        
+        form.reset();
+        grecaptcha.reset(); // Reset reCAPTCHA
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        msg.innerHTML = '<i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Sorry, there was an error sending your message. Please try again.';
+        msg.className = 'message error show';
+        
+        setTimeout(() => {
+            msg.classList.remove('show');
+            setTimeout(() => {
+                msg.innerHTML = '';
+                msg.className = 'message';
+            }, 300);
+        }, 5000);
+    })
+    .finally(() => {
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
+});
+</script>
 </body>
 </html>
